@@ -54,7 +54,7 @@ with col1:
             return image.addBands(ndvi)
 
         def addNDWI(image):
-            ndwi = image.normalizedDifference(['B3', 'B8']).rename('NDWI')
+            ndwi = image.normalizedDifference(['B3', 'B11']).rename('NDWI')
             return image.addBands(ndwi)
         
         def addNDBI(image):
@@ -336,5 +336,3 @@ else:
             )
 
         Map.to_streamlit(height=480)
-    
-st.write(st.session_state)
