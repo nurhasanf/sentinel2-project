@@ -336,3 +336,5 @@ else:
             )
 
         Map.to_streamlit(height=480)
+
+st.write(st.session_state)
