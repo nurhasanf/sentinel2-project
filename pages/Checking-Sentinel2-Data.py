@@ -14,10 +14,10 @@ geometry = roi.geometry()
 
 col1,col2,col3,col4 = st.columns([1,1,1,1])
 with col2:
-    start_date = st.date_input('start_date', date(2023,1,1), key='start_date')
+    start_date = st.date_input('Start Date', date(2023,1,1), key='start_date')
 
 with col3:
-    end_date = st.date_input('end_date', key='end_date')
+    end_date = st.date_input('End Date', key='end_date')
 
 col5,col6,col7 = st.columns([1,2,1])
 
@@ -51,7 +51,3 @@ def loadData(start_date,end_date):
 
 if __name__ == '__main__':
     loadData(start_date=st.session_state['start_date'], end_date=st.session_state['end_date'])
-
-    
-
-st.write(st.session_state)
