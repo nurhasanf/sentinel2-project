@@ -1,4 +1,5 @@
 earthengine_api==0.1.386
-geemap==0.30.4
-streamlit==1.30.0
 geedim==1.7.2
+geemap==0.30.4
+pandas==2.2.0
+streamlit==1.30.0
