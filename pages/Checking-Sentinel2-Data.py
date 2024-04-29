@@ -29,7 +29,7 @@ def loadData(start_date,end_date):
     if st.session_state['geometry'] == 'DAS Cisanggarung':
         geometry = ee.FeatureCollection('users/idoandifyfirdaus/RoI/DasCisanggarung').geometry()
 
-    images = (gd.MaskedCollection.from_name('COPERNICUS/S2_SR_HARMONIZED')
+    images = (gd.MaskedCollection.from_name('COPERNICUS/S2_HARMONIZED')
                 .search(str(start_date), str(end_date), geometry, cloudless_portion=0))
     
     data = images.properties
